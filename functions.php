@@ -36,6 +36,20 @@ function geniuscourses_body_class($classes) {
 }
 add_filter('body_class', 'geniuscourses_body_class');
 
+/** Enqueue register menu data. */
+function geniuscourses_register_menus() {
+    register_nav_menus(array(
+       'header_nav' => 'Header Navigation',
+       'footer nav' => 'Footer Navigation'
+    ));
+}
+add_action('after_setup_theme', 'geniuscourses_register_menus', 0);
+
+
+
+
+
+
 
 
 
@@ -83,13 +97,6 @@ if ( ! function_exists( 'geniuscourses_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'geniuscourses' ),
-			)
-		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
