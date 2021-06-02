@@ -17,7 +17,7 @@
           'theme_location' => 'header_nav',
           'menu_class' => 'myclass'
       )
-  )
-?>
+  );
 
-header
+  get_search_form();
+?>

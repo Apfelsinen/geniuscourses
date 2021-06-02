@@ -36,14 +36,28 @@ function geniuscourses_body_class($classes) {
 }
 add_filter('body_class', 'geniuscourses_body_class');
 
-/** Enqueue register menu data. */
-function geniuscourses_register_menus() {
+/** Enqueue register menu data. Also markup valid HTML5 */
+function geniuscourses_theme_init() {
     register_nav_menus(array(
        'header_nav' => 'Header Navigation',
        'footer nav' => 'Footer Navigation'
     ));
+
+    // Switch default core markup for search form, comment form, and comments to output valid HTML5.
+    add_theme_support(
+        'html5',
+        array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'style',
+            'script',
+        )
+    );
 }
-add_action('after_setup_theme', 'geniuscourses_register_menus', 0);
+add_action('after_setup_theme', 'geniuscourses_theme_init', 0);
 
 
 
