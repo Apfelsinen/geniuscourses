@@ -1,4 +1,5 @@
 <?php
+
 /** Enqueue scripts and styles. */
 function geniuscourses_enqueue_scripts() {
     //Регистрируем стили и скрипт:
@@ -16,18 +17,24 @@ function geniuscourses_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'geniuscourses_enqueue_scripts');
 
+/** Enqueue header meta data. */
+function geniuscourses_show_meta(){
+    echo "<meta name='author' content='MacPika'>";
+}
+add_action('wp_head', 'geniuscourses_show_meta');
 
+/** Enqueue body class data. */
+function geniuscourses_body_class($classes) {
+    if(is_front_page()){
+        $classes[] = 'main_class';
 
-function geniuscourses_scripts() {
-
+        return $classes;
+    } else if(is_singular()) {
+        $classes[] = 'extra_class';
+    }
 
 }
-add_action( 'wp_enqueue_scripts', 'geniuscourses_scripts' );
-
-
-
-
-
+add_filter('body_class', 'geniuscourses_body_class');
 
 
 
