@@ -20,4 +20,13 @@
   );
 
   get_search_form();
+
+  $name = 'Alex Sochirka aka "CRIKOVA"';
+  $name = 'Alex Sochirka aka strongCRIKOVA"';
+
+
+
 ?>
+
+    <input name=""author" value="<?php echo esc_attr($name); ?>" />
+    <!-- esc_attr обязателе в html атрибьютах иначе будуд ошибки, к примеру текст в двойных ковычках не выводится -->
