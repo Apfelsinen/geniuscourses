@@ -56,8 +56,16 @@ function geniuscourses_theme_init() {
             'script',
         )
     );
+    // Make theme available for translation.
+    load_theme_textdomain('geniuscourses', get_template_directory().'/lang');
 }
 add_action('after_setup_theme', 'geniuscourses_theme_init', 0);
+
+
+
+
+
+
 
 
 
@@ -86,13 +94,6 @@ if ( ! function_exists( 'geniuscourses_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function geniuscourses_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Geniuscourses, use a find and replace
-		 * to change 'geniuscourses' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'geniuscourses', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -112,22 +113,6 @@ if ( ! function_exists( 'geniuscourses_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				'style',
-				'script',
-			)
-		);
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
