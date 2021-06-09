@@ -19,5 +19,10 @@
 
     //По мимо интерлизации их необходимо эскейпить
 
+    $city = "Chisinau";
+    $country = "Moldova";
 
+    printf(esc_html__('My city is %1$s and my country is %2$s', 'geniuscourses'),$city,$country);
+
+    echo wp_kses(__('Alex <strong>Sochirca</strong>','geniuscourses'),array('strong'=>array()))
 ?>
