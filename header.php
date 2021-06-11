@@ -12,17 +12,8 @@
 <?php wp_body_open(); ?>
 
 <?php
-    __('Hello','geniuscourses'); //Возвращает значение
-    _e('Hello','geniuscourses'); //Выводит значение
 
-    $name = __('Hello','geniuscourses'); //переменная хранит значение
+    $rating = '4';
 
-    //По мимо интерлизации их необходимо эскейпить
-
-    $city = "Chisinau";
-    $country = "Moldova";
-
-    printf(esc_html__('My city is %1$s and my country is %2$s', 'geniuscourses'),$city,$country);
-
-    echo wp_kses(__('Alex <strong>Sochirca</strong>','geniuscourses'),array('strong'=>array()))
+    prindf(esc_html(_n('%s star', '%s stars', $rating, 'geniuscourses')), $rating);
 ?>
