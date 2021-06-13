@@ -10,10 +10,4 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-
-<?php
-
-    $rating = '4';
-
-    prindf(esc_html(_n('%s star', '%s stars', $rating, 'geniuscourses')), $rating);
-?>
+ header
