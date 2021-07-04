@@ -2,9 +2,9 @@
 
 	<div>
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-			Telo posta
+			Body of the post
 		<?php endwhile; else : ?>
-			Netu postov
+			No posts
 		<?php endif; ?>
 	</div>
 
