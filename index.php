@@ -8,10 +8,6 @@
 		<?php endif; ?>
 	</div>
 
-    <div class="main-content">
-        <a href="#" class="button">Click Me</a>
-    </div>
-
 <?php
 //get_sidebar();
 get_footer();
