@@ -1,4 +1,4 @@
-<?php
+git<?php
 
 /** Enqueue scripts and styles. */
 function geniuscourses_enqueue_scripts() {
