@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', 'geniuscourses_enqueue_scripts');
 
 /** Enqueue header meta data. */
 function geniuscourses_show_meta(){
-    echo "<meta name='author' content='MacPika'>";
+    echo "<meta name='author' content='Apfelsinen'>";
 }
 add_action('wp_head', 'geniuscourses_show_meta');
 
